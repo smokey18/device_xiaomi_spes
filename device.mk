@@ -523,3 +523,7 @@ ifdef CR_VERSION
 PRODUCT_BOOT_JARS += \
     WfdCommon
 endif
+
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
