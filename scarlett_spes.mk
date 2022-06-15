@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022 The ScarlettAOSP Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -11,18 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from spes/spesn device
 $(call inherit-product, device/xiaomi/spes/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common ScarlettAOSP stuff.
+$(call inherit-product, vendor/scarlett/config/common_full_phone.mk)
 
-# Additions
-$(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
-$(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
-
-# Camera
-$(call inherit-product-if-exists, vendor/miuicamera/config.mk)
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Product Specifics
-PRODUCT_NAME := lineage_spes
+PRODUCT_NAME := scarlett_spes
 PRODUCT_DEVICE := spes
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 11
@@ -31,11 +27,7 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-scarlett
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="spes-user 11 RKQ1.211001.001 V13.0.9.0.RGCMIXM release-keys"
