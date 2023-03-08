@@ -6,6 +6,12 @@
 
 // Init scripts
 sh_binary {
+    name: "init.goodix.events.sh",
+    src: "bin/init.goodix.events.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.mdm.sh",
     src: "bin/init.mdm.sh",
     vendor: true,
