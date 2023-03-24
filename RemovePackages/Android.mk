@@ -7,16 +7,19 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
     arcore \
     AmbientSensePrebuilt \
+    AndroidAutoStubPrebuilt \
     AppDirectedSMSService \
     Camera2 \
     ConnMO \
     ConnMetrics \
+    Drive \
     DCMO \
     DevicePolicyPrebuilt \
     DMService \
     GCS \
     GoogleCamera \
     MaestroPrebuilt \
+    Maps \
     Music \
     MicropaperPrebuilt \
     MyVerizonServices \
